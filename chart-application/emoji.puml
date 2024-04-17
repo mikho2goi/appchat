@@ -1,0 +1,15 @@
+@startuml
+class com.raven.emoji.Emogi
+class com.raven.emoji.Model_Emoji
+class java.awt.Image
+class java.util.ArrayList
+class java.util.List
+class javax.swing.Icon
+class javax.swing.ImageIcon
+com.raven.emoji.Emogi ..> java.util.ArrayList
+com.raven.emoji.Emogi ..> java.util.List
+com.raven.emoji.Emogi ..> javax.swing.ImageIcon
+com.raven.emoji.Model_Emoji ..> java.awt.Image
+com.raven.emoji.Model_Emoji ..> javax.swing.Icon
+com.raven.emoji.Model_Emoji ..> javax.swing.ImageIcon
+@enduml

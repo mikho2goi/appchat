@@ -1,0 +1,30 @@
+@startuml
+class com.raven.event.PublicEvent
+class com.raven.model.Model_Login
+class com.raven.model.Model_Message
+class com.raven.model.Model_Receive_Message
+class com.raven.model.Model_Register
+class com.raven.model.Model_Send_Message
+class com.raven.model.Model_User_Account
+class java.io.File
+class java.util.List
+class javax.swing.Icon
+interface com.raven.event.EventChat
+interface com.raven.event.EventFileReceiver
+interface com.raven.event.EventFileSender
+interface com.raven.event.EventImageView
+interface com.raven.event.EventLogin
+interface com.raven.event.EventMain
+interface com.raven.event.EventMenuLeft
+interface com.raven.event.EventMessage
+com.raven.event.EventChat ..> com.raven.model.Model_Receive_Message
+com.raven.event.EventChat ..> com.raven.model.Model_Send_Message
+com.raven.event.EventFileReceiver ..> java.io.File
+com.raven.event.EventImageView ..> javax.swing.Icon
+com.raven.event.EventLogin ..> com.raven.model.Model_Login
+com.raven.event.EventLogin ..> com.raven.model.Model_Register
+com.raven.event.EventMain ..> com.raven.model.Model_User_Account
+com.raven.event.EventMenuLeft ..> com.raven.model.Model_User_Account
+com.raven.event.EventMenuLeft ..> java.util.List
+com.raven.event.EventMessage ..> com.raven.model.Model_Message
+@enduml

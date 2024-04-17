@@ -1,0 +1,60 @@
+@startuml
+annotation java.lang.Override
+class com.raven.app.MessageType
+class com.raven.event.EventFileReceiver
+class com.raven.event.EventFileSender
+class com.raven.model.Model_File_Receiver
+class com.raven.model.Model_File_Sender
+class com.raven.model.Model_Login
+class com.raven.model.Model_Message
+class com.raven.model.Model_Package_Sender
+class com.raven.model.Model_Receive_Image
+class com.raven.model.Model_Receive_Message
+class com.raven.model.Model_Register
+class com.raven.model.Model_Reques_File
+class com.raven.model.Model_Send_Message
+class com.raven.model.Model_User_Account
+class com.raven.service.Service
+class io.socket.client.Ack
+class io.socket.client.Socket
+class java.io.File
+class java.io.IOException
+class java.io.RandomAccessFile
+class org.json.JSONException
+class org.json.JSONObject
+com.raven.model.Model_File_Receiver ..> java.lang.Override
+com.raven.model.Model_File_Receiver ..> com.raven.event.EventFileReceiver
+com.raven.model.Model_File_Receiver ..> com.raven.service.Service
+com.raven.model.Model_File_Receiver ..> io.socket.client.Ack
+com.raven.model.Model_File_Receiver ..> io.socket.client.Socket
+com.raven.model.Model_File_Receiver ..> java.io.File
+com.raven.model.Model_File_Receiver ..> java.io.IOException
+com.raven.model.Model_File_Receiver ..> java.io.RandomAccessFile
+com.raven.model.Model_File_Receiver ..> org.json.JSONException
+com.raven.model.Model_File_Sender ..> java.lang.Override
+com.raven.model.Model_File_Sender ..> com.raven.event.EventFileSender
+com.raven.model.Model_File_Sender ..> com.raven.service.Service
+com.raven.model.Model_File_Sender ..> io.socket.client.Ack
+com.raven.model.Model_File_Sender ..> io.socket.client.Socket
+com.raven.model.Model_File_Sender ..> java.io.File
+com.raven.model.Model_File_Sender ..> java.io.IOException
+com.raven.model.Model_File_Sender ..> java.io.RandomAccessFile
+com.raven.model.Model_Login ..> org.json.JSONException
+com.raven.model.Model_Login ..> org.json.JSONObject
+com.raven.model.Model_Package_Sender ..> org.json.JSONException
+com.raven.model.Model_Package_Sender ..> org.json.JSONObject
+com.raven.model.Model_Receive_Image ..> org.json.JSONException
+com.raven.model.Model_Receive_Image ..> org.json.JSONObject
+com.raven.model.Model_Receive_Message ..> com.raven.app.MessageType
+com.raven.model.Model_Receive_Message ..> org.json.JSONException
+com.raven.model.Model_Receive_Message ..> org.json.JSONObject
+com.raven.model.Model_Register ..> org.json.JSONException
+com.raven.model.Model_Register ..> org.json.JSONObject
+com.raven.model.Model_Reques_File ..> org.json.JSONException
+com.raven.model.Model_Reques_File ..> org.json.JSONObject
+com.raven.model.Model_Send_Message ..> com.raven.app.MessageType
+com.raven.model.Model_Send_Message ..> org.json.JSONException
+com.raven.model.Model_Send_Message ..> org.json.JSONObject
+com.raven.model.Model_User_Account ..> org.json.JSONException
+com.raven.model.Model_User_Account ..> org.json.JSONObject
+@enduml
